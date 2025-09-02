@@ -27,13 +27,6 @@ app.get('/', async (req: Request, res: Response) => {
         return;
     }
     try {
-        console.log("Todas as variáveis de ambiente")
-        console.log(process.env.DBUSER)
-        console.log(process.env.DBPASSWORD)
-        console.log(process.env.DBNAME)
-        console.log(process.env.DBHOST)
-        console.log(process.env.DBPORT)
-        
         const connection = await mysql.createConnection({
             host: process.env.DBHOST,
             user: process.env.DBUSER,
